@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&family=Roboto:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button{
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+:root{
+    --bg-dark: #191919;
+    --bg-light: #fafafa;
+    --text-light: white;
+    --text-dark: black;
+}
+
+body{
+    background: #000;
+    color: var(--text-light);
+    font-family: 'Roboto', sans-serif;
+}
+
+#music-section{
+    position: fixed;
+    left: 0;
+    bottom: 2px;
+    box-shadow: -3px 0 1px white;
+    width: 100%;
+    min-height: 12vh;
+    background: var(--bg-dark);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.main-icon{
+    font-size: 2rem;
+    margin: 0 20px;
+}
+
+.main-icon:hover{
+    color: #a9a9a9;
+}
+
+.player{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.progressbar{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 14px;
+}
+.progressbar input{
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+}
+
+.soundControl{
+    display: flex;
+    align-items: center;
+}
+
+.soundControl button{
+    margin: 0 10px;
+}
+
+.soundControl input{
+    height: 5px;
+    cursor: pointer;
+}
+
+#nav{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding:1rem 2rem;
+    background-color: #202020;
+    color: red;
+    font-size: 1.5rem;
+}
+
+.threedot{
+    display: none;
+}
+
+#container{
+    /* border: 1px solid white; */
+    min-height: 85vh;
+    display: flex;
+    width: 100%;
+}
+
+#container .box1{
+    min-width: 280px;
+    width: 20%;
+    background-color: #191919;
+    display: flex;
+    padding: 3rem 2rem;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(109, 109, 237)
+}
+
+.box1 input{
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+.music-container{
+    flex:1;
+    /* padding: 2rem; */
+    /* border: 1px solid white; */
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead tr th{
+    text-align: left;
+    padding: 15px 20px;
+    color: blue;
+}
+
+table tbody{
+    margin-top: 10px;
+}
+
+table tbody tr:hover{
+    background-color: rgba(81, 217, 255, 0.726);
+    cursor: pointer;
+}
+
+table tbody tr td{
+    text-align: left;
+    padding: 15px 20px;
+    margin: 0;
+    color: rgb(27, 248, 196);
+}
+
+table tbody tr:last-child{
+    text-align: center;
+
+}
+
+.bg-none{
+    background-color: transparent;
+}
+
+.current-track-indicator{
+    background-color: #585858;
+    border-radius: 100px;
+}
+
+@media screen and (max-width: 770px) {
+    #container .box1{
+        display: none;
+    }
+
+    .soundControl{
+        display: none;
+    }
+
+    #title{
+        display: none;
+    }
+
+    #music-section{
+        height: 20vh;
+        align-items: center;
+        justify-content: space-around;
+        padding: 2rem 1rem;
+        flex-direction: column;
+    }
+
+    .player{
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .progressbar{
+        margin: 30px 0;
+    }
+
+    .threedot{
+        display: block;
+        text-align: center;
+    }
+
+    #nav{
+        text-align: center;
+        font-size: 1.1rem;
+    }
+}
